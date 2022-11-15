@@ -3,24 +3,13 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	int i=10;
-	char c='a';
+void main(void) {
+	int i=300; //pi는 자료형 int,4Byte , 300> 8bit 넘어감 
+	
+	int *pi=&i;
+	char *pc=&i; //4바이트 가지고 있고, 1Byte를 가리킨다 
 
-
-	int *iptr;
-	iptr = &i;
-	
-	char *cptr;
-	cptr=&c;
-	
-	int *iptr2;
-	iptr2=iptr;
+	printf("%i,%i,%i\n",i,*pi,*pc);
 	
 	
-	printf("i:%p\n%p(size:%i)\n",iptr,&i,sizeof(iptr));
-	printf("c:%p\n%p(size:%i)\n",cptr,&c,sizeof(cptr));
-	printf("iptr2:%p,%i\n",iptr2,*iptr2);
-	
-	return 0;
 }  
